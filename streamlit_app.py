@@ -37,14 +37,11 @@ if uploaded_file is not None:
     try:
         response = requests.post(
             'https://csv-to-json-converter-backend.onrender.com/convert',
-            
-            
-            files={'file': (uploaded_file.name, uploaded_file)}
+            files={'file': (uploaded_file.name, uploaded_file, 'text/csv')}
         )
         
         if response.status_code == 200:
             json_data = response.json().get('json')
-            
             st.json(json_data)
             
             st.download_button(
@@ -59,3 +56,5 @@ if uploaded_file is not None:
     
     except requests.exceptions.ConnectionError:
         st.error("API server is not running. Please start Flask first.")
+    except Exception as e:
+        st.error(f"Unexpected error: {e}")
