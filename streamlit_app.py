@@ -1,5 +1,6 @@
 import streamlit as st
 import requests
+import json
 
 st.title("CSV to JSON Converter")
 
@@ -41,17 +42,21 @@ if uploaded_file is not None:
         )
         
         if response.status_code == 200:
-            json_data = response.json().get('json')  
-            st.json(json_data) 
+            json_data = response.json().get('json')  # This is a Python list/dict
+    
+    # Display JSON
+            st.json(json_data)
+    
+    # Convert to JSON string for downloading
+            json_str = json.dumps(json_data, indent=2)
 
-            
             st.download_button(
                 label="Save JSON",
-                data=json_data,
+                data=json_str,  # Pass the string, not the list/dict
                 file_name=uploaded_file.name.replace(".csv", ".json"),
                 mime="application/json"
             )
-            
+                    
         else:
             st.error(f"Error: {response.json().get('error', 'Unknown error')}")
     
