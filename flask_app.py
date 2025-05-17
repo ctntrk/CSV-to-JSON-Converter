@@ -16,11 +16,11 @@ def convert_csv_to_json():
         if file.filename == '':
             return jsonify({"error": "Invalid file"}), 400
 
-        csv_data = io.StringIO(file.stream.read().decode('utf-8-sig'))  # Handle BOM
+        csv_data = io.StringIO(file.stream.read().decode('utf-8-sig'))  
         df = pd.read_csv(csv_data)
-        json_list = df.to_dict(orient='records')  # Convert to Python objects
+        json_list = df.to_dict(orient='records')  
         
-        return jsonify({"json": json_list})  # Serialize directly to JSON
+        return jsonify({"json": json_list})  
     
     except pd.errors.EmptyDataError:
         return jsonify({"error": "CSV file is empty"}), 400
@@ -30,7 +30,7 @@ def convert_csv_to_json():
 
 if __name__ == '__main__':
     import os
-    port = int(os.environ.get("PORT", 5000))  # Render PORT ortam değişkenini alır
+    port = int(os.environ.get("PORT", 5000))  
     app.run(host='0.0.0.0', port=port)
 
 
