@@ -41,8 +41,9 @@ if uploaded_file is not None:
         )
         
         if response.status_code == 200:
-            json_data = response.json().get('json')
-            st.json(json_data)
+            json_data = response.json().get('json')  
+            st.json(json_data) 
+
             
             st.download_button(
                 label="Save JSON",
