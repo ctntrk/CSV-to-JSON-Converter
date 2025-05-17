@@ -42,17 +42,17 @@ if uploaded_file is not None:
         )
         
         if response.status_code == 200:
-            json_data = response.json().get('json')  # This is a Python list/dict
+            json_data = response.json().get('json')  
     
-    # Display JSON
+
             st.json(json_data)
     
-    # Convert to JSON string for downloading
+    
             json_str = json.dumps(json_data, indent=2)
 
             st.download_button(
                 label="Save JSON",
-                data=json_str,  # Pass the string, not the list/dict
+                data=json_str,  
                 file_name=uploaded_file.name.replace(".csv", ".json"),
                 mime="application/json"
             )
