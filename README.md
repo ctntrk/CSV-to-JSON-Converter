@@ -3,6 +3,15 @@
 This is a simple and user-friendly web app that allows you to convert `.csv` files into `.json` format in just a few clicks. It's ideal for developers, data analysts, and anyone who works with structured data.
 
 ---
+## 🌐 Demo
+
+You can try out the application and see it in action by visiting the link below:
+
+[**CSV-to-JSON-Converter Demo**](https://csv-to-json-converter.streamlit.app/)
+
+⚠️ Note: Streamlit Cloud deploy may put the app to sleep if it’s not being actively used or if there’s low traffic. 💤
+
+---
 
 ## 🚀 About the Project
 
