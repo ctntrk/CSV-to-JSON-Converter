@@ -2,6 +2,8 @@
 
 This is a simple and user-friendly web app that allows you to convert `.csv` files into `.json` format in just a few clicks. It's ideal for developers, data analysts, and anyone who works with structured data.
 
+---
+
 ## CSV to JSON Converter Demo Introduction Video
 
 https://github.com/user-attachments/assets/8904e7e6-067c-479a-9ae6-2b2f2bb336e5
@@ -38,12 +40,18 @@ CSV (Comma-Separated Values) is a popular format for storing tabular data, but m
 3. The app sends the file to a backend server and converts it.
 4. View or download the resulting `.json` file.
 
+---
+
 ## CSV to JSON Converter Web Interface
 ![Alt text](https://github.com/ctntrk/CSV-to-JSON-Converter/blob/main/CSV%20to%20JSON%20Converter%20Web%20Interface.jpg)
+
 ---
+
 ## Result Screen After Convert (Display JSON Content)
 ![Alt text](https://github.com/ctntrk/CSV-to-JSON-Converter/blob/main/Result%20Screen%20After%20Convert%20(Display%20JSON%20Content).jpg)
+
 ---
+
 ## Result Screen After Convert (Save as JSON File Type)
 ![Alt text](https://github.com/ctntrk/CSV-to-JSON-Converter/blob/main/Result%20Screen%20After%20Convert%20(Save%20as%20JSON%20File%20Type).jpg)
 
